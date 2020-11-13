@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* RESET CSS */
+
+*, ::after, ::before {margin:0;padding:0;box-sizing:border-box}
+html, body {height:100%;-webkit-font-smoothing:antialiased}
+html {font-family:sans-serif; -webkit-text-size-adjust:none; -ms-text-size-adjust:none}
+body {font-family:sans-serif; font-size:14px; line-height:1.6; word-break:break-all; color:#000; background-color:#fff;}
+
+/* *, ::after, ::before {margin:0;padding:0;box-sizing:border-box}
+html, body {height:100%;-webkit-font-smoothing:antialiased}
+html {font-family:sans-serif; -webkit-text-size-adjust:none; -ms-text-size-adjust:none}
+body {font-family:sans-serif; font-size:12px; line-height:1.4; word-break:break-all; color:#000; background-color:#fff;}
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {display:block}
+a {text-decoration:none; background-color:transparent;}
+a:active, a:focus, a:hover, a:visited {outline:0; text-decoration:none}
+img {border:0 none; outline:0; vertical-align:middle}
+h1, h2, h3, h4, h5,h6 {font-weight:400} 
+table {width:100%; border-collapse:collapse; border-spacing:0}
+ul, li, ol {list-style:none}
+address, em, i {font-style:normal;word-break:break-all}
+button {cursor:pointer;outline:0;border:0 none;text-transform:none;background:0 0;font-family:inherit}
+button::-moz-focus-inner,
+input::-moz-focus-inner {padding:0;border:0}video{display:inline-block;width:100%;height:100%;vertical-align:baseline;object-fit:fill}
+input {outline:0;font-family:inherit;color:inherit;appearance:none;-webkit-appearance:none;-webkit-boder-radius:0}
+label {cursor:pointer}
+select,textarea {outline:0;font-family:inherit;color:inherit}
+textarea {overflow:auto} */
+
+.mask {z-index:1000;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6)}
+
+/* EVENT CSS */
+#raemian-event-2020 {position:relative; max-width:1200px; min-width:320px; margin:0 auto;}
+#raemian-event-2020 * {margin:0; padding:0; box-sizing:border-box;}
+#raemian-event-2020 img {width:100%; height:auto;}
+#raemian-event-2020::after {content:''; display:none; z-index:3; position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,.5);}
+#raemian-event-2020.mask::after {display:block;}
+#raemian-event-2020 .blind {overflow:hidden; position:absolute; width:1px; height:1px; margin:-1px; clip:rect(0 0 0 0);}
+#raemian-event-2020 button {cursor:pointer; outline:0; border:0 none; text-transform:none; background:0 0; font-family:inherit;}
+
+#raemian-event-2020 .event-content .tab {width:100%; list-style:none; margin:0;}
+#raemian-event-2020 .event-content .tab::after {content:''; display:block; clear:both;}
+#raemian-event-2020 .event-content .tab li {float:left; width:20%; border:1px solid #000;}
+#raemian-event-2020 .event-content .tab li button {display:block; width:100%;}
+#raemian-event-2020 .event-content .tab-content {display:none;}
+#raemian-event-2020 .event-content .tab-content-info {display:block;}
+
+/* 래미안 flex */
+#raemian-event-2020 .flex-slider {overflow:hidden; width:300px; height:300px; margin:0; padding:0;}
+#raemian-event-2020 .flex-slider ul {list-style:none; margin:0; padding:0;}
+#raemian-event-2020 .flex-slider ul li {margin:0; padding:0;}
+
+#raemian-event-2020 .now-wrap button {border:1px solid #000;}
+
+/*  */
+#reamian-now_popup {display:none;}
+
+
+/* #raemian-event-2020 .event-content {position:relative;}
+#raemian-event-2020 .event-content .event-list {position:absolute; top:26%; left:11%; width:85%; list-style:none; margin:0; padding:0;}
+#raemian-event-2020 .event-content .event-list::after {content:''; display:block; clear:both;}
+#raemian-event-2020 .event-content .event-list li {float:left; width:25%;}
+#raemian-event-2020 .event-content .event-list li::after {content:''; display:block; clear:both;}
+#raemian-event-2020 .event-content .event-list label {float:left; vertical-align:middle; cursor:pointer;}
+#raemian-event-2020 .event-content .event-list label img {float:left; display:inline-block; width:79.7%; vertical-align:middle;}
+#raemian-event-2020 .event-content .event-list label::before {content:''; position:relative; float:left; display:block; width:38px; height:38px; margin:0; 
+    background:url('../images/ico_checkbox.png') no-repeat center top; background-size:100%;}
+#raemian-event-2020 .event-content .event-list li .input-choice {display:none; width:38px; height:38px;}
+#raemian-event-2020 .event-content .event-list li .input-choice:checked + label::before {background-position:center bottom;}
+#raemian-event-2020 .event-content .btn_event {cursor:pointer; position:absolute; top:35%; left:23.3%; width:55.4%; outline:none; border:0; background-color:transparent;}
+#raemian-event-2020 .event-giveaway {position:relative;}
+#raemian-event-2020 .event-giveaway .btn-raemian-event-share {position:absolute; bottom:10.6%; left:13.3%; width:72.6%;}
+
+/* Media Query */
+@media all and (min-width:769px) and (max-width:1024px) {
+    #raemian-event-2020 .event-content .event-list label::before,
+    #raemian-event-2020 .event-content .event-list li .input-choice {width:30px; height:30px;}
+    #raemian-event-2020 .event-content .event-list label img {width:69%;}
+}
+
+@media all and (min-width:480px) and (max-width:768px) {
+    #raemian-event-2020 .event-content .event-list label::before,
+    #raemian-event-2020 .event-content .event-list li .input-choice {width:24px; height:24px;}
+    #raemian-event-2020 .event-content .event-list label img {width:60%; padding-top:1%;}
+}
+
+@media all and (min-width:320px) and (max-width:479px) {
+    #raemian-event-2020 .event-content .event-list label::before,
+    #raemian-event-2020 .event-content .event-list li .input-choice {width:18px; height:18px;}
+    #raemian-event-2020 .event-content .event-list label img {width:55%; padding-top:5%;}
+}
+
+@media all and (max-width:319px) {
+    #raemian-event-2020 .event-content .event-list label::before,
+    #raemian-event-2020 .event-content .event-list li .input-choice {width:18px; height:18px;}
+    #raemian-event-2020 .event-content .event-list label img {width:55%; padding-top:1%;}
+} 

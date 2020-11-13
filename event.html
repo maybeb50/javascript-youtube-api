@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="minimal-ui, width=640, user-scalable=no, target-densitydpi=device-dpi" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
+    <link rel="stylesheet" href="./css/style.css">  
+</head>
+<body>
+    <!-- 2020 래미안 하반기 온라인 이벤트 -->
+    <div id="raemian-event-2020">
+        <section class="event-title">
+            <h1></h1>
+        </section>
+        <section class="event-content">
+            <ul class="tab">
+                <li class="tab-list tab-active" data-num="0"><button type="button">이벤트 홈</button></li>
+                <li class="tab-list" data-num="1"><button type="button">래미안 stroy</button></li>
+                <li class="tab-list" data-num="2"><button type="button">래미안 Now</button></li>
+                <li class="tab-list" data-num="3"><button type="button">래미안 HomeLab</button></li>
+                <li class="tab-list" data-num="4"><button type="button">래미안 Flex</button></li>
+            </ul>
+            <!-- 이벤트 안내 -->
+            <article class="tab-content tab-content-info">
+                <h1>이벤트 안내</h1>
+                <div class="video-wrap">
+                    <button type="button" class="video-list" data-video-num="0">래미안 퍼스티지</button>
+                    <button type="button" class="video-list" data-video-num="1">래미안 블레스티지</button>
+                </div>
+            </article>
+            <!-- 래미안 Flex -->
+            <article class="tab-content tab-content-flex">
+                <h1>래미안 Flex</h1>
+                <div class="flex-slider">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="./images/slide/1.jpg" alt=""></li>
+                        <li class="swiper-slide"><img src="./images/slide/2.jpg" alt=""></li>
+                        <li class="swiper-slide"><img src="./images/slide/3.jpg" alt=""></li>
+                    </ul>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- 사진 업로드 팝업 -->
+                <div id="flex-upload" class="popup">
+                    <h2>래미안 flex 사진 업로드</h2>
+                    <div class="upload-form">
+                        <form>
+                            <div>
+                                <input type="file" name="" />
+                            </div>
+                            <div>
+                                <input type="text" name="" placeholder="Ex) 래미안 첼리투스" />
+                            </div>
+                        </form>
+                    </div>
+                    <button type="button" class="btn-upload-close">닫기</button>
+                </div>
+                <!-- e: 사진 업로드 팝업 -->
+            </article>
+            <!-- 래미안 lab -->
+            <article id="" class="tab-content tab-content-now">
+                <h1>래미안 Now</h1>
+            </article>
+            <!-- 래미안 vlog -->
+            <article class="tab-content tab-content-vlog">
+                <h1>래미안 vlog</h1>
+            </article>
+            <!-- 래미안 history -->
+            <article class="tab-content tab-content-history">
+                <h1>래미안 history</h1>
+            </article>
+        </section>
+    </div>
+    <!-- 동영상 팝업 -->
+    <div id="reamian-now_popup" class="layerpopup">
+        <h1>팝업</h1>
+        <div id="player"></div>
+        <button type="button" class="btn-layerpopup_close">닫기</button>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./lib/swiper/swiper.min.js"></script>
+    <script src="./js/event-common.js"></script>
+</body>
+</html>
